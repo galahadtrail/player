@@ -1,5 +1,5 @@
-from PyQt6.QtWidgets import QApplication, QWidget, QMainWindow
 from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
+from PyQt6.QtCore import QSize, Qt
 
 
 class MainWindow(QMainWindow):
@@ -8,8 +8,21 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("My App")
         button = QPushButton("Press Me!")
+        button.setCheckable(True)
+        button.clicked.connect(self.the_button_was_clicked)
+        button.clicked.connect(self.the_button_was_toggled)
 
-        self.centralWidget(button)
+        self.setFixedSize(400, 300)
+
+        self.setCentralWidget(button)
+
+    @staticmethod
+    def the_button_was_clicked(self):
+        print("Clicked!")
+
+    @staticmethod
+    def the_button_was_toggled(self):
+        print('Checked?')
 
 
 app = QApplication([])
