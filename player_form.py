@@ -15,6 +15,11 @@ class UiWizardPage(object):
 
         self.scroll_area_widget_contents = QtWidgets.QWidget()
         self.scroll_area_widget_contents.setGeometry(QtCore.QRect(0, 0, 479, 329))
+
+        self.verticalScrollBar = QtWidgets.QScrollBar(self.scroll_area_widget_contents)
+        self.verticalScrollBar.setGeometry(QtCore.QRect(460, 0, 16, 331))
+        self.verticalScrollBar.setObjectName("verticalScrollBar")
+
         self.scroll_area_widget_contents.setObjectName("scroll_area_widget_contents")
         self.scroll_area.setWidget(self.scroll_area_widget_contents)
         self.push_button_1 = QtWidgets.QPushButton(wizard_page)
@@ -41,6 +46,14 @@ class UiWizardPage(object):
         icon2.addPixmap(QtGui.QPixmap("images/backward_button.png"))
         self.push_button_3.setIcon(icon2)
         self.push_button_3.setObjectName("backward")
+
+        self.vertical_slider = QtWidgets.QSlider(wizard_page)
+        self.vertical_slider.setGeometry(QtCore.QRect(550, 370, 16, 160))
+        self.vertical_slider.setObjectName("vertical_slider")
+        self.progress_bar = QtWidgets.QProgressBar(wizard_page)
+        self.progress_bar.setGeometry(QtCore.QRect(270, 440, 118, 23))
+        self.progress_bar.setProperty("value", 24)
+        self.progress_bar.setObjectName("progress_bar")
 
         self.retranslate_ui(wizard_page)
         QtCore.QMetaObject.connectSlotsByName(wizard_page)
