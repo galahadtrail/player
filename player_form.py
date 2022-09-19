@@ -62,4 +62,4 @@ class UiWizardPage(object):
     @staticmethod
     def retranslate_ui(wizard_page):
         _translate = QtCore.QCoreApplication.translate
-        wizard_page.setWindowTitle(_translate("wizard_page", "wizard_page"))
+        wizard_page.setWindowTitle(_translate("My Mp3-Player", "My Mp3-Player"))
