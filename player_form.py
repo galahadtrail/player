@@ -50,9 +50,10 @@ class UiWizardPage(object):
         self.vertical_slider = QtWidgets.QSlider(wizard_page)
         self.vertical_slider.setGeometry(QtCore.QRect(550, 370, 16, 160))
         self.vertical_slider.setObjectName("vertical_slider")
+
         self.progress_bar = QtWidgets.QProgressBar(wizard_page)
-        self.progress_bar.setGeometry(QtCore.QRect(270, 440, 118, 23))
-        self.progress_bar.setProperty("value", 24)
+        self.progress_bar.setGeometry(QtCore.QRect(170, 440, 318, 23))
+        self.progress_bar.setProperty("value", 50)
         self.progress_bar.setObjectName("progress_bar")
 
         self.retranslate_ui(wizard_page)
