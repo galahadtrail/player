@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt6.QtWidgets import QApplication, QWidget
 from PyQt6.QtGui import QIcon
 from player_form import UiWizardPage
 
